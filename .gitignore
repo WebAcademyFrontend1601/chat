@@ -1,0 +1,17 @@
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+._*
+
+*.log
+/.idea
+
+node_modules
+static
