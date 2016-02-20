@@ -1,6 +1,11 @@
-$border-radius: .15rem;
+$border-radius: .1rem;
 $primary-color: rgba(0, 0, 0, .5);
 
 body {
   $primary-color;
+}
+
+a,
+button {
+  transition: all .2s ease-in-out;
 }
