@@ -1,7 +1,5 @@
-$primary-color: rgba(0, 0, 0, .5);
-
 body {
-  $primary-color;
+  color: rgba(0, 0, 0, .5);
 }
 
 a,
@@ -11,8 +9,8 @@ button {
 
 .wellcome {
   margin-top: 4rem;
+}
 
-  form {
+  .wellcome form {
     margin: 2rem 0 1rem 0;
   }
-}
