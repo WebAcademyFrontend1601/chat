@@ -13,5 +13,5 @@ React.render(
     <ChatApp />
   </Provider>,
 
-  document.getElementById('react-view')
+  document.getElementById('app')
 );
