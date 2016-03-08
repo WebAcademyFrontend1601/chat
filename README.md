@@ -1,11 +1,12 @@
 # chat
-Anton Korzhynskyi
 
-Front-end part for chat app created with Twitter Bootstrap, ES6, React and Redux
+Front-end part for chat app created with Material Design Lite, ES6, React and Redux
 
 ## Instalation
 ```
 $ git clone https://github.com/WebAcademyFrontend1601/chat.git
 $ cd chat
-$ npm install 
+$ npm i
 ```
+
+Anton Korzhynskyi
