@@ -1,0 +1,17 @@
+<div class="page-wrapper">
+    <div class="page-header">
+        <h1>Edit profile</h1>
+    </div>
+
+    <form ng-submit="profileCtrl.updateProfile()">
+        <p ng-hide="profileCtrl.profile.displayName">
+            You'll need a displayName to start chatting
+        </p>
+
+        <div class="input-group">
+            <input required type="text" class="form-control" placeholder="Display Name" ng-model="profileCtrl.profile.displayName">
+        </div>
+
+        <input type="submit" class="btn btn-default" value="Set display name">
+    </form>
+</div>
