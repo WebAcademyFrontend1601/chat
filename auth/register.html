@@ -1,0 +1,33 @@
+<div class="mdl-grid">
+  <div class="login">
+    <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+      <div class="mdl-tabs__tab-bar">
+          <a class="mdl-tabs__tab" ui-sref="login">Log In</a>
+
+          <a class="mdl-tabs__tab is-active" ui-sref="register">Sign Up</a>
+      </div>
+    </div>
+
+    <form class="login-form" ng-submit="authCtrl.register()">
+      <div class="login-form__item">
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" id="Login" ng-model="authCtrl.user.email">
+          <label class="mdl-textfield__label" for="Login">Login</label>
+        </div>
+      </div>
+
+      <div class="login__item">
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="password" id="Password" ng-model="authCtrl.user.password">
+          <label class="mdl-textfield__label" for="Password">Password</label>
+        </div>
+      </div>
+
+      <div class="login__item">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">Sign Up</button>
+      </div>
+    </form>
+
+    <span>{{ authCtrl.error.message }}</span>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+  <header class="demo-header mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">{{ messagesCtrl.channelName }}</span>
+      <a class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" ui-sref="channels.create">
+        <i class="material-icons" role="presentation">add</i>
+        <span class="visuallyhidden">Add</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="demo-drawer mdl-layout__drawer">
+    <header class="demo-drawer-header">
+      <div class="demo-avatar-dropdown">
+        <span>{{ channelsCtrl.profile.displayName }}</span><a href="#" ng-click="channelsCtrl.logout()">Log out</a>
+        <div class="mdl-layout-spacer"></div>
+        <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+          <i class="material-icons" role="presentation">arrow_drop_down</i>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+          <li class="mdl-menu__item">
+            <a ui-sref="profile">Edit profile</a>
+          </li>
+
+          <li class="mdl-menu__item">
+            <a href="#" ng-click="channelsCtrl.logout()">Log out</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <nav class="demo-navigation mdl-navigation">
+      <h4>Rooms</h4>
+      <a class="mdl-navigation__link" ng-repeat="channel in channelsCtrl.channels" ui-sref="channels.messages({ channelId: channel.$id })" ui-sref-active="selected">{{ channel.name }}</a>
+
+      <h4>Members</h4>
+      <a class="mdl-navigation__link" ng-repeat="user in channelsCtrl.users" ng-if="user.$id !== channelsCtrl.profile.$id" ui-sref="channels.direct({ uid: user.$id})" ui-sref-active="selected">{{ user.displayName }}</a>
+    </nav>
+  </div>
+
+  <main class="mdl-layout__content mdl-color--grey-100">
+    <ui-view></ui-view>
+  </main>
+</div>
