@@ -40,6 +40,10 @@ body {
   position: absolute;
 }
 
+h4 {
+  margin-left: 20px;
+}
+
 .demo-avatar {
   width: 48px;
   height: 48px;
