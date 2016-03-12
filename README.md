@@ -1,6 +1,6 @@
 # chat
 
-Front-end part for chat app created with Material Design Lite, ES6, React and Redux
+Front-end part for chat app created with Material Design Lite and AngularJS
 
 ## Instalation
 ```
