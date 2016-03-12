@@ -1,7 +1,8 @@
 @import "material.min.css";
 
 .login {
-  margin: 10rem auto;
+  margin: 0 auto;
+  padding-top: 10rem;
   max-width: 300px;
   text-align: center;
 }
