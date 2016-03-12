@@ -5,7 +5,7 @@
     angular.module('chatApp')
         .factory('Messages', function($firebaseArray, FirebaseUrl) {
 
-        var channelMessagesRef = new Firebase(FirebaseUrl + 'channelMessages');
+        var channelMessagesRef = new Firebase(FirebaseUrl + 'roomsMessages');
         var userMessagesRef = new Firebase(FirebaseUrl + 'userMessages');
 
         return {
