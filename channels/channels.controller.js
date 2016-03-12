@@ -9,12 +9,9 @@
 
         channelsCtrl.profile = profile;
         channelsCtrl.channels = channels;
-        channelsCtrl.getDispayName = Users.getDisplayName;
-        channelsCtrl.getGravatar = Users.getGravatar;
+        channelsCtrl.getDisplayName = Users.getDisplayName;
 
         channelsCtrl.users = Users.all;
-
-        Users.setOnline(profile.$id);
 
         channelsCtrl.logout = function() {
             channelsCtrl.profile.online = null;
