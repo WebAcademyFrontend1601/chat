@@ -1,32 +1,25 @@
-<main class="mdl-layout__content mdl-color--grey-100">
-  <div class="mdl-grid">
-    <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
-      <div class="comment mdl-color-text--grey-700" ng-repeat="message in messagesCtrl.messages">
-        <header class="comment__header">
-          <div class="comment__author">
-            <strong>{{ channelsCtrl.getDisplayName(message.uid) }}</strong>
-            <span>{{ message.timestamp | date: 'short' }}</span>
-          </div>
-        </header>
-
-        <div class="comment__text">
-          {{ message.body }}
-        </div>
+<div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
+  <div class="comment mdl-color-text--grey-700" ng-repeat="message in messagesCtrl.messages">
+    <header class="comment__header">
+      <div class="comment__author">
+        <strong>{{ channelsCtrl.getDisplayName(message.uid) }}</strong>
+        <span>{{ message.timestamp | date: 'short' }}</span>
       </div>
+    </header>
+
+    <div class="comment__text">
+      {{ message.body }}
     </div>
   </div>
-</main>
+</div>
 
-<div class="mdl-layout__header mdl-layout__header1 mdl-color--grey-200">
-  <div class="mdl-layout__header-row">
-    <form ng-submit="messagesCtrl.sendMessage()">
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <textarea rows=1 class="mdl-textfield__input" id="comment" ng-model="messagesCtrl.message"></textarea>
-        <label for="comment" class="mdl-textfield__label">Message</label>
-      </div>
-      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" type="submit">
-        <i class="material-icons" role="presentation">check</i><span class="visuallyhidden">add message</span>
-      </button>
-    </form>
-  </div>
+<div class="mdl-layout__header mdl-color--grey-200">
+  <form class="message" ng-submit="messagesCtrl.sendMessage()">
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <textarea rows=4 class="mdl-textfield__input" id="comment" ng-model="messagesCtrl.message"></textarea>
+    </div>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-button--icon" type="submit">
+      <i class="material-icons" role="presentation">check</i><span class="visuallyhidden">add message</span>
+    </button>
+  </form>
 </div>
