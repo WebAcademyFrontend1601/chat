@@ -5,3 +5,4 @@ angular.module('chatApp')
 
         return auth;
     });
+    
