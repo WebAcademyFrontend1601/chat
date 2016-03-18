@@ -1,15 +1,16 @@
 {
   "name": "chat",
-  "version": "0.0.0",
-  "dependencies": {
-    "angular": "^1.3.0",
-    "bootstrap": "3.3.4",
-    "angularfire": "~1.1.0",
-    "angular-ui-router": "~0.2.14",
-    "angular-md5": "~0.1.7",
-    "material-design-lite": "^1.1.2"
-  },
+  "version": "1.0.0",
   "devDependencies": {
     "browser-sync": "^2.11.1"
+  },
+  "dependencies": {
+    "angular": "^1.3.0",
+    "angular-md5": "~0.1.7",
+    "angular-ui-router": "~0.2.14",
+    "angularfire": "~1.1.0",
+    "firebase": "^2.4.1",
+    "jquery": "^2.2.2",
+    "material-design-lite": "^1.1.2"
   }
 }
