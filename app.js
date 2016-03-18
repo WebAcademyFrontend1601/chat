@@ -11,7 +11,7 @@ angular
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'home/home.html',
+        templateUrl: 'html/home.html',
         resolve: {
             requireNoAuth: function ($state, Auth) {
                 return Auth.$requireAuth().then(function(auth) {
@@ -26,7 +26,7 @@ angular
       })
       .state('login', {
         url: '/login',
-        templateUrl: 'auth/login.html',
+        templateUrl: 'html/login.html',
         controller: 'AuthController as authCtrl',
         resolve: {
             requireNoAuth: function($state, Auth) {
@@ -43,7 +43,7 @@ angular
 
       .state('register', {
           url: '/register',
-          templateUrl: 'auth/register.html',
+          templateUrl: 'html/register.html',
           controller: 'AuthController as authCtrl',
           resolve: {
               requireNoAuth: function($state, Auth) {
@@ -60,7 +60,7 @@ angular
 
     .state('profile', {
         url: '/profile',
-        templateUrl: 'users/profile.html',
+        templateUrl: 'html/profile.html',
         controller: 'ProfileController as profileCtrl',
         resolve: {
             auth: function($state, Auth) {
@@ -78,7 +78,7 @@ angular
 
       .state('channels', {
           url: '/channels',
-          templateUrl: 'channels/channels.html',
+          templateUrl: 'html/channels.html',
           controller: 'ChannelsController as channelsCtrl',
           resolve: {
               channels: function(Channels) {
@@ -103,13 +103,13 @@ angular
 
         .state('channels.create', {
             url: '/create',
-            templateUrl: 'channels/create.html',
+            templateUrl: 'html/create.html',
             controller: 'ChannelsController as channelsCtrl'
         })
 
         .state('channels.messages', {
             url: '/{channelId}/messages',
-            templateUrl: 'messages/messages.html',
+            templateUrl: 'html/messages.html',
             controller: 'MessagesController as messagesCtrl',
             resolve: {
                 messages: function($stateParams, Messages) {
@@ -123,7 +123,7 @@ angular
 
         .state('channels.direct', {
             url: '/{uid}/messages/direct',
-            templateUrl: 'messages/messages.html',
+            templateUrl: 'html/messages.html',
             controller: 'MessagesController as messagesCtrl',
             resolve: {
                 messages: function($stateParams, Messages, profile) {
