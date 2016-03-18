@@ -5,15 +5,15 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="node_modules/material-design-lite/material.min.css">
+    <link rel="stylesheet" href="node_modules/material-design-lite/material.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="main.css">
-    <script src="node_modules/material-design-lite/material.js"></script>
+    <link rel="stylesheet" href="css/main.css">
   </head>
 
   <body ng-app="chatApp">
     <ui-view></ui-view>
     
+    <script src="node_modules/material-design-lite/material.js"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/angular/angular.js"></script>
     <script src="node_modules/firebase/lib/firebase-web.js"></script>
@@ -23,13 +23,9 @@
 
     <script src="app.js"></script>
     
-    <script src="auth/auth.service.js"></script>
-    <script src="channels/channels.service.js"></script>
-    <script src="users/users.service.js"></script>
-    <script src="messages/messages.service.js"></script>
-    <script src="auth/auth.controller.js"></script>
-    <script src="channels/channels.controller.js"></script>
-    <script src="users/profile.controller.js"></script>
-    <script src="messages/messages.controller.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/channels.js"></script>
+    <script src="js/users.js"></script>
+    <script src="js/messages.js"></script>
   </body>
 </html>
