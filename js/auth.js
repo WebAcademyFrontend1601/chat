@@ -33,3 +33,12 @@ angular.module('chatApp')
 
     return auth;
   });
+
+angular.module('chatApp')
+  .run(function ($rootScope,$timeout) {
+    $rootScope.$on('$viewContentLoaded', ()=> {
+      $timeout(() => {
+        componentHandler.upgradeAllRegistered();
+      })
+    })
+  });
