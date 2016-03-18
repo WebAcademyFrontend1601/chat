@@ -13,11 +13,12 @@
   </div>
 </div>
 
-<div class="mdl-layout__header mdl-color--grey-200">
+<div class="mdl-layout__header mdl-color--grey-100">
   <form class="message" ng-submit="messagesCtrl.sendMessage()">
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
       <textarea rows=4 class="mdl-textfield__input" id="comment" ng-model="messagesCtrl.message"></textarea>
     </div>
+
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-button--icon" type="submit">
       <i class="material-icons" role="presentation">check</i><span class="visuallyhidden">add message</span>
     </button>
